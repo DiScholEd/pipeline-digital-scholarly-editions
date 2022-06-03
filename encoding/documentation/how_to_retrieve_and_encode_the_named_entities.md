@@ -81,9 +81,9 @@ The output of the scripts for the index will have to be copy/paste inside the in
 The output of the scripts for the statements will have to be copy/paste inside the function created for the last script and called in the module importation.
 
 __5. Apply the NE encoding script to the corpus__  
-Finally, once we have all our NE, inside their own functions and our corpus of XML files, we can add them to the encoding, by applying the script [encoding_named_entities.py](https://github.com/FloChiff/DAHNProject/blob/master/Project%20development/Scripts/Named_Entities/encoding_named_entities.py). It will read the XML file, recreate it, add a new line to the revisionDesc and add the NE in the encoding of the body.
+Finally, once we have all our NE, inside their own functions and our corpus of XML files, we can add them to the encoding, by applying the script [encoding_named_entities.py](https://github.com/DiScholEd/pipeline-digital-scholarly-editions/blob/master/encoding/scripts/encoding_named_entities.py). It will read the XML file, recreate it, add a new line to the revisionDesc and add the NE in the encoding of the body.
 
-The script have been developed by taken into account the fact that the corpus has already been encoded but it is still possible to use only part of it at the same time of the general encoding of the corpus. In the [text_tagging](https://github.com/FloChiff/DAHNProject/blob/master/Project%20development/Scripts/Encoding/text_tagging.py) script, it is possible to add the functions in the module importation and the following snippet of code after the line `text = text.replace("€", "")` (line 114):
+The script have been developed by taken into account the fact that the corpus has already been encoded but it is still possible to use only part of it at the same time of the general encoding of the corpus. In the [text_tagging](https://github.com/DiScholEd/pipeline-digital-scholarly-editions/blob/master/encoding/scripts/text_tagging.py) script, it is possible to add the functions in the module importation and the following snippet of code after the line `text = text.replace("€", "")` (line 114):
 `text = persName(text)`  
 `text = placeName(text)`  
 `text = title(text)`  
